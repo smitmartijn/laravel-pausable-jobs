@@ -1,0 +1,30 @@
+{
+  "name": "smitmartijn/laravel-pausable-jobs",
+  "description": "Pause and resume Laravel jobs individually, instead of having to pause the entire queue.",
+  "type": "library",
+  "require": {
+    "php": "^8.1",
+    "laravel/framework": "^10.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Smitmartijn\\PausableJobs\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Smitmartijn\\PausableJobs\\PausableJobsServiceProvider"
+      ],
+      "aliases": {
+        "JobPause": "Smitmartijn\\PausableJobs\\Facades\\JobPause"
+      }
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "license": "MIT"
+}
